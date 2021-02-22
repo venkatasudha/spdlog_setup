@@ -47,7 +47,7 @@ find_package(Threads REQUIRED)
 add_compile_options("$<$<CONFIG:DEBUG>:${DEBUG_FLAGS}>")
 include(CMakeToolsHelpers OPTIONAL)
 
-if (EXISTS ${CMAKE_SOURCE_DIR}/deps/spdlog/CMakeLists.txt)
+if (EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/deps/spdlog/CMakeLists.txt)
   add_subdirectory(deps/spdlog)
 else()
   # allow usage of installed dependency
